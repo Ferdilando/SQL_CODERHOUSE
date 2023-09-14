@@ -28,7 +28,6 @@ CREATE TABLE DEPOSITO (
 CREATE TABLE PRODUCTO (
   id_producto INT PRIMARY KEY,
   nombre VARCHAR(45),
-  categoria VARCHAR(45),
   precio DECIMAL(10, 2)
 );
 
@@ -49,6 +48,7 @@ CREATE TABLE STOCK (
   id_stock INT PRIMARY KEY,
   id_deposito INT,
   id_producto INT,
+  cantidad INT,
   FOREIGN KEY (id_deposito) REFERENCES DEPOSITO(id_deposito),
   FOREIGN KEY (id_producto) REFERENCES PRODUCTO(id_producto)
 );
