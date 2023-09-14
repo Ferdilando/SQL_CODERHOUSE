@@ -1,3 +1,5 @@
+
+-- Calcula el iva para cada uno de los productos
 CREATE DEFINER=`root`@`localhost` FUNCTION `calcular_iva`(precio FLOAT) RETURNS float
     DETERMINISTIC
 BEGIN
@@ -6,7 +8,7 @@ BEGIN
     RETURN precio_iva;
 END
 
-
+-- Calcula la cantidad de ítems comprado por cliente
 CREATE DEFINER=`root`@`localhost` FUNCTION `items_por_cliente`(id_cliente INT) RETURNS int
     DETERMINISTIC
 BEGIN
